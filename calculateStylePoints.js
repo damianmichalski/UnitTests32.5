@@ -1,12 +1,8 @@
 const calculateStylePoints = (styleNotes) => {
-    
-    const maxNote = Math.max.apply(null, styleNotes);
-    const minNote = Math.min.apply(null, styleNotes);
-    let sumNotes = 0;
-    styleNotes.forEach( note => {
-        sumNotes += note;
-    });
-    return sumNotes - maxNote - minNote;
+  const maxNote = Math.max(...styleNotes);
+  const minNote = Math.min(...styleNotes);
+
+  return styleNotes.reduce((a, b) => a + b) - (maxNote + minNote);
 };
 
 module.exports = calculateStylePoints;

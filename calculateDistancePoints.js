@@ -16,7 +16,7 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
     }
     const diff = distance - kPoint;
     const points = diff * multiplier;
-    return hillSizePoint + parseFloat(points.toFixed(1));
+    return hillSizePoint + points.toFixed(1);
 };
 
 module.exports = calculateDistancePoints;
